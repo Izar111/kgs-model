@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6" project-jdk-type="Python SDK" />
+  <component name="UnattendedHostPersistenceState">
+    <option name="openedFilesInfos">
+      <list>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="279" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/BERT_classifier.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="4810" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/tokenization_kobert.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="9033" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/NER_Predict.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/In-Out/output_NER.txt" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="50" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/In-Out/input_NER.txt" />
+        </OpenedFileInfo>
+      </list>
+    </option>
+  </component>
+</project>
