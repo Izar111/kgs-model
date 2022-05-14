@@ -40,20 +40,20 @@ const server = new ApolloServer({
   csrfPrevention: true,
 });
 
+//model call function
 function call_model(args){
 
   const test = call_process('python3',['model_run.py',args]);
-  const recode_start = ">>>End NER-RE=================";
-
-  var rec = false;
   
-  //test.stdout.on('data', function(data) { result_str = data.toString(); console.log("+++++++++++++++++++++++"); console.log(data.toString()); console.log("+++++++++++++++++++++++"); } ); 
-  test.stdout.on('data', function(data) {     
+      
+  //model result get
+  test.stdout.on('data', function(data) { 
     result_str += data.toString(); 
   } ); 
+  //check error
   test.stderr.on('data', function(data) { console.log(data.toString()); });
-  //test.on('exit',function() { result_json = JSON.parse(result_str); console.log("result is \n",result_json); } )
-  test.on('exit',function() { console.log(result_str) } )
+  //model is end
+  test.on('exit',function() { console.log(result_str); result_json = JSON.parse(result_str); } )
 }
 
 // The `listen` method launches a web server.
@@ -62,5 +62,6 @@ server.listen({port: 8080,}).then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
   
   call_model("{'sentence':['손흥민은 대한민국의 축구선수이다 .','제롬 파월 미국 연방준비제도(Fed·연준) 의장은 26일(현지시간) 기준금리를 올릴 여력이 충분하다는 입장을 밝혔다.'],'link':['aaa','bbb']}")
+  //call_model();
 
 });
